@@ -1,0 +1,18 @@
+acsd@ubuntu22desktopminikube:/tmp/test$ cd Exc2
+acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl create namespace sprint6
+namespace/sprint6 created
+acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl create -f scaleapp-deployment.yml
+deployment.apps/scaleapp-deployment created
+acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl create -f scaleapp-service.yaml
+service/service-scaleapp created
+acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl config set-context --current --namespace=sprint6
+Context "minikube" modified.
+acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl port-forward service/service-scaleapp 7080:8081
+Forwarding from 127.0.0.1:7080 -> 8080
+Forwarding from [::1]:7080 -> 8080
+Handling connection for 7080
+kubectl apply -f hpa.yaml
+Handling connection for 7080
+
+kubectl get hpa
+
