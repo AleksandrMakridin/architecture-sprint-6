@@ -1,9 +1,9 @@
 acsd@ubuntu22desktopminikube:/tmp/test$ cd Exc2
 acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl create namespace sprint6
 namespace/sprint6 created
-acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl create -f scaleapp-deployment.yml
+acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl create -f deployment.yml
 deployment.apps/scaleapp-deployment created
-acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl create -f scaleapp-service.yaml
+acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl create -f service.yaml
 service/service-scaleapp created
 acsd@ubuntu22desktopminikube:/tmp/test/Exc2$ kubectl config set-context --current --namespace=sprint6
 Context "minikube" modified.
