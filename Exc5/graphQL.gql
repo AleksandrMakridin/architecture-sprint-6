@@ -1,0 +1,39 @@
+
+#Клиент по ID
+type Query {
+  client(id: ID!): Client
+}
+
+#Список документов клиента
+type Query {
+  client(id: ID!): [Document]
+}
+
+#Родственниках клиента
+type Query {
+  client(id: ID!): [Relative]
+}
+
+
+type Client {
+  id: String!
+  name: String
+  age: Int
+  document: Document
+  relative: Relative
+}
+
+type Document {
+  id: String!
+  type: String!
+  number: Int
+  issueDate: String
+  expiryDate: String
+}
+
+type Relative {
+  id: String!
+  relationType: String
+  name: String
+  age: Int
+}
