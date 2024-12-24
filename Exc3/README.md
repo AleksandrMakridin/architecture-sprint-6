@@ -19,5 +19,5 @@
 
 Решите, будете ли вы использовать паттерн Transactional Outbox
 
-- Используется в ins-product-agregator
+- Используется в ins-product-agregator (да и не совсем понял почему в as-is нет ins-product-aggregator-db - добавил)
 
